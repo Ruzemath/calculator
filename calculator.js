@@ -41,7 +41,7 @@ class Calculator
 
     calculate()
     {
-        let result = '';
+        let result;
         const first = parseFloat(this.firstOperand);
         const second = parseFloat(this.secondOperand);
 
@@ -77,7 +77,10 @@ class Calculator
     updateScreen()
     {
         this.secondOperandData.innerText = this.secondOperand;
-        this.firstOperandData.innerText = this.firstOperand;
+        if(this.operator != null)
+            this.firstOperandData.innerText = this.firstOperand + " " + this.operator;
+        else
+            this.firstOperandData.innerText = '';
     }
 }
 
