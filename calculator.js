@@ -110,3 +110,8 @@ equalBtn.addEventListener('click', btn => {
     myCalculator.calculate();
     myCalculator.updateScreen();
 });
+
+clearBtn.addEventListener('click', btn => {
+    myCalculator.clearAll();
+    myCalculator.updateScreen();
+});
