@@ -16,7 +16,7 @@ class Calculator
 
     delete()
     {
-
+        this.secondOperand = this.secondOperand.toString().slice(0, -1);
     }
 
     appendNum(number)
@@ -113,5 +113,10 @@ equalBtn.addEventListener('click', btn => {
 
 clearBtn.addEventListener('click', btn => {
     myCalculator.clearAll();
+    myCalculator.updateScreen();
+});
+
+deleteBtn.addEventListener('click', btn => {
+    myCalculator.delete();
     myCalculator.updateScreen();
 });
